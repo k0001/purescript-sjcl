@@ -1,0 +1,25 @@
+{
+  "name": "purescript-sjcl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athanclark/purescript-sjcl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athanclark/purescript-sjcl/issues"
+  },
+  "homepage": "https://github.com/athanclark/purescript-sjcl#readme",
+  "dependencies": {
+    "sjcl": "^1.0.8"
+  }
+}
