@@ -24,3 +24,8 @@ exports.partialImpl = bitArray.partial;
 exports.partial_Impl = function partial_Impl (i,w) {
     return bitArray.partial(i,w,1);
 };
+
+
+exports.fromBits = sjcl.codec.bytes.fromBits;
+
+exports.toBits = sjcl.codec.bytes.toBits;

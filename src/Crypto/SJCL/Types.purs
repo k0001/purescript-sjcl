@@ -1,5 +1,7 @@
 module Crypto.SJCL.Types
   ( BitArray
+  , toBits
+  , fromBits
   , bitLength
   , bitSlice
   , byteswapM
@@ -13,7 +15,7 @@ module Crypto.SJCL.Types
   ) where
 
 
-import Prelude (class Eq, class Semigroup)
+import Prelude (class Eq, class Semigroup, class Show, show, (<<<))
 import Data.Function.Uncurried (Fn2, Fn3, runFn3, runFn2)
 
 
@@ -22,11 +24,18 @@ type BitLength = Int
 
 newtype BitArray = BitArray (Array Word)
 
+foreign import fromBits :: BitArray -> Array Word
+foreign import toBits :: Array Word -> BitArray
+
+
 instance eqBitArray :: Eq BitArray where
   eq = runFn2 equalImpl
 
 instance semigroupBitArray :: Semigroup BitArray where
   append = runFn2 concatImpl
+
+instance showBitArray :: Show BitArray where
+  show = show <<< fromBits
 
 
 type Word = Number
