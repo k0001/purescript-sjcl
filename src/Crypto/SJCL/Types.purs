@@ -6,7 +6,6 @@ module Crypto.SJCL.Types
 
 
 newtype BitArray = BitArray (Array Word)
-
 newtype Word = Word Number
 
 
