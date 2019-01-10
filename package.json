@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/athanclark/purescript-sjcl#readme",
   "dependencies": {
-    "sjcl": "^1.0.8"
+    "sjcl": "git://github.com/athanclark/sjcl.git#e6ca43fbcc85689f9e6b212cc88b85a53295a459"
   }
 }
