@@ -1,10 +1,11 @@
-module Crypto.SJCL.Hash.Types (HashingFunction, HashingState, new, reset, update, finalize) where
+module Crypto.SJCL.Hash.Types (HashingFunction, HashingState, new, reset, update, finalize, hash) where
 
 import Crypto.SJCL.Types (BitArray)
 
-import Prelude (Unit)
+import Prelude (Unit, bind, discard)
 import Effect (Effect)
 import Effect.Uncurried (EffectFn1, EffectFn2, runEffectFn1, runEffectFn2)
+import Effect.Unsafe (unsafePerformEffect)
 
 
 foreign import data HashingFunction :: Type
@@ -31,3 +32,11 @@ foreign import finalizeImpl :: EffectFn1 HashingState BitArray
 
 finalize :: HashingState -> Effect BitArray
 finalize = runEffectFn1 finalizeImpl
+
+
+
+hash :: HashingFunction -> BitArray -> BitArray
+hash f x = unsafePerformEffect do
+  s <- new f
+  update s x
+  finalize s
