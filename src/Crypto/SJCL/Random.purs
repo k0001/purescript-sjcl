@@ -5,8 +5,7 @@ module Crypto.SJCL.Random
   , addEntropy, isReady, getProgress, startCollectors, stopCollectors, random
   ) where
 
-import Crypto.SJCL.Types (Word)
-import Crypto.SJCL.BigNum (Paranoia)
+import Crypto.SJCL.Types (Word, Paranoia)
 
 import Prelude (Unit, eq, (<$>))
 import Data.Nullable (Nullable, toNullable)

@@ -12,6 +12,7 @@ module Crypto.SJCL.Types
   , partial'
   , Word
   , BitLength
+  , Paranoia
   ) where
 
 
@@ -75,3 +76,5 @@ foreign import partial_Impl :: Fn2 Int Word Word
 
 partial' :: Int -> Word -> Word
 partial' = runFn2 partial_Impl
+
+type Paranoia = Int
