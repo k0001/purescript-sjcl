@@ -8,6 +8,7 @@ module Crypto.SJCL.BigNum
   , p127, p25519, p192k, p224k, p256k, p192, p224, p256, p384, p512
   , random
   , mod, inverseMod, power, square, mulmod, powermod, montpowermod
+  , Paranoia
   ) where
 
 import Crypto.SJCL.Types (BitArray)
