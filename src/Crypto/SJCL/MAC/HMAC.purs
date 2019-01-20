@@ -1,9 +1,9 @@
-module Crypto.SJCL.PRF.HMAC
+module Crypto.SJCL.MAC.HMAC
   ( HMACState, hmac, new, reset, update, digest, mac, encrypt
   ) where
 
 import Crypto.SJCL.Types (BitArray)
-import Crypto.SJCL.PRF.Types (PRF)
+import Crypto.SJCL.MAC.Types (MACFunction)
 import Crypto.SJCL.Hash.Types (HashingFunction)
 
 import Prelude (Unit)
@@ -14,7 +14,7 @@ import Effect (Effect)
 import Effect.Uncurried (EffectFn1, EffectFn2, runEffectFn1, runEffectFn2)
 
 
-foreign import hmac :: PRF :: Type
+foreign import hmac :: MACFunction
 
 
 foreign import data HMACState :: Type
