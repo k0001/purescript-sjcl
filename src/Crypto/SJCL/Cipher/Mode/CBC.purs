@@ -9,9 +9,6 @@ import Effect (Effect)
 import Effect.Uncurried (EffectFn3, runEffectFn3)
 
 
--- foreign import cbc :: BlockMode
-
--- foreign import data CBCState :: Type
 
 foreign import encryptImpl :: EffectFn3 BlockCipher BitArray BitArray BitArray
 
