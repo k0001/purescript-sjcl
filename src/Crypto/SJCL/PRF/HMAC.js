@@ -4,6 +4,8 @@ var sjcl = require('sjcl');
 
 var hmac = sjcl.misc.hmac;
 
+exports.hmac = hmac;
+
 exports.newImpl = function newImpl (k,mf) {
     return new hmac(k,mf);
 };
