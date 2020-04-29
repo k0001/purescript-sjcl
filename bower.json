@@ -16,6 +16,6 @@
     "purescript-exceptions": "^4.0.0",
     "purescript-nullable": "^4.1.0",
     "purescript-tuples-native": "^2.0.0",
-    "purescript-sized-vectors": "^3.1.0"
+    "purescript-sized-vectors": "^5.0.0"
   }
 }
