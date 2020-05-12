@@ -7,4 +7,6 @@ exports.fromBitsImpl = function fromBitsImpl (x, ml) {
 };
 
 
-exports.toBits = sjcl.codec.arrayBuffer.toBits;
+exports.toBits = function(x) {
+    return sjcl.codec.arrayBuffer.toBits(x);
+};
